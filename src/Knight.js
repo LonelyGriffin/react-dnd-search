@@ -4,7 +4,10 @@ import * as DnDItems from "./dndItems";
 
 const knightSource = {
     beginDrag(props) {
-        return {};
+        return {
+            x: props.x,
+            y: props.y,
+        };
     }
 };
 

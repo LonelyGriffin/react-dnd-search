@@ -35,6 +35,21 @@ body {
     background-color: #fff;
 }
 
+.square_can-drop {
+    background-color: #c3ff9f;
+}
+
+.square_black.square_over {
+    background-color: #414141;
+}
+.square_white.square_over {
+    background-color: #cbcbcb;
+}
+
+.square_over.square_can-drop {
+    background-color: #70ff5a;
+}
+
 .board {
     display: inline-flex;
     flex-direction: column;
