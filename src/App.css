@@ -1,3 +1,20 @@
+body {
+    background-color: #dddddd;
+}
+
 .knight {
     font-size: 45px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+}
+
+.square_black {
+    background-color: #000;
+}
+
+.square_white {
+    background-color: #fff;
 }
