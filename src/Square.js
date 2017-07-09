@@ -6,7 +6,7 @@ export class Square extends React.Component {
         const colorModifier = isWhite ? "square_white" : "square_black";
         return (
             <div className={`square ${colorModifier}`}>
-                {React.cloneElement(this.props.children, { isInWhiteSquare: isWhite })}
+                {this.props.children && React.cloneElement(this.props.children, { isInWhiteSquare: isWhite })}
             </div>
         );
     }

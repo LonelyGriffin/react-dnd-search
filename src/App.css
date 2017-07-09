@@ -29,3 +29,13 @@ body {
 .square_white {
     background-color: #fff;
 }
+
+.board {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.board__row {
+    display: inline-flex;
+    flex-direction: row;
+}
