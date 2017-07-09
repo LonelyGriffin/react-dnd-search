@@ -3,7 +3,8 @@ body {
 }
 
 .knight {
-    font-size: 45px;
+    font-size: 65px;
+    cursor: move;
 }
 
 .knight_in-black-square {
@@ -12,6 +13,10 @@ body {
 
 .knight_in-white-square {
     color: #444444;
+}
+
+.knight_dragging{
+    opacity: 0.5;
 }
 
 .square {

@@ -1,11 +1,29 @@
 import React from "react";
+import { DragSource } from 'react-dnd';
+import * as DnDItems from "./dndItems";
 
-export class Knight extends React.Component {
+const knightSource = {
+    beginDrag(props) {
+        return {};
+    }
+};
+
+const knightCollect = (connect, monitor) => {
+    return {
+        connectDragSource: connect.dragSource(),
+        isDragging: monitor.isDragging()
+    }
+};
+
+export class KnightComponent extends React.Component {
     render() {
-        const {isInWhiteSquare} = this.props;
+        const {isInWhiteSquare, connectDragSource, isDragging} = this.props;
         const colorModifier = isInWhiteSquare ? "knight_in-white-square" : "knight_in-black-square";
-        return (
-          <span className={`knight ${colorModifier}`}>♘</span>
-        );
+        const draggingModifier = isDragging ? "knight_dragging" : "";
+        return (connectDragSource(
+          <span className={`knight ${colorModifier} ${draggingModifier}`}>♘</span>
+        ));
     }
 }
+
+export const Knight = DragSource(DnDItems.KNIGHT, knightSource, knightCollect)(KnightComponent);
