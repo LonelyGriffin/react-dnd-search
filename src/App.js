@@ -6,7 +6,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Board/>
+                <Board knightPositionX={4} knightPositionY={4}/>
             </div>
         );
     }
