@@ -19,6 +19,10 @@ body {
     opacity: 0.5;
 }
 
+.knight_drag-preview {
+    font-size: 90px;
+}
+
 .square {
     width: 100px;
     height: 100px;
