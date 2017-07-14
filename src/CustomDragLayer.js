@@ -7,19 +7,24 @@ const customDragLayerCollect = (monitor) => {
     return {
         isDragging: monitor.isDragging(),
         itemType: monitor.getItemType(),
+        currentOffset: monitor.getSourceClientOffset(),
     }
 };
 
 export class CustomDragLayerComponent extends React.Component {
     render() {
-        const {isDragging, itemType} = this.props;
+        const {isDragging, itemType, currentOffset} = this.props;
 
-            if(!isDragging || itemType !== DnDItems.KNIGHT) {
+        if(!isDragging || itemType !== DnDItems.KNIGHT || !currentOffset) {
             return null;
         }
 
+        const style = {
+            transform: `translate(${currentOffset.x}px, ${currentOffset.y}px)`
+        };
+
         return(
-            <div>asda</div>
+            <span className="custom-layer" style={style}>♘</span>
         )
     }
 }

@@ -19,10 +19,6 @@ body {
     opacity: 0.5;
 }
 
-.knight_drag-preview {
-    font-size: 90px;
-}
-
 .square {
     width: 100px;
     height: 100px;
@@ -46,6 +42,7 @@ body {
 .square_black.square_over {
     background-color: #414141;
 }
+
 .square_white.square_over {
     background-color: #cbcbcb;
 }
@@ -62,4 +59,14 @@ body {
 .board__row {
     display: inline-flex;
     flex-direction: row;
+}
+
+.custom-layer {
+    color: #915138;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    font-size: 90px;
 }
