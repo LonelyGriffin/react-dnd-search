@@ -14,7 +14,7 @@ export class CustomDragLayerComponent extends React.Component {
     render() {
         const {isDragging, itemType} = this.props;
 
-        if(!isDragging || itemType === DnDItems.KNIGHT) {
+            if(!isDragging || itemType !== DnDItems.KNIGHT) {
             return null;
         }
 

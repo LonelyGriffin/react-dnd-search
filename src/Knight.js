@@ -23,7 +23,7 @@ const knightCollect = (connect, monitor) => {
 export class KnightComponent extends React.Component {
 
     componentDidMount() {
-        this.props.connectDragPreview(getEmptyImage, {
+        this.props.connectDragPreview(getEmptyImage(), {
             captureDraggingState: true,
         })
     }
